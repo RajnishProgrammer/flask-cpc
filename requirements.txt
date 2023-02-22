@@ -1,0 +1,11 @@
+click==8.0.1
+Flask==2.1.5
+Flask-WTF==0.15.1
+itsdangerous==2.1.0
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+Werkzeug==2.1.5
+WTForms==3.0.0
+fitz==0.0.1.dev2
+numpy==1.22.1
+opencv-python-headless==4.5.4.58
