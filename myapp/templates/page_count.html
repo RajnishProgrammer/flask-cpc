@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block title %}Page Count{% endblock %} {% block
+content %}
+<h1>Page Count</h1>
+<p>Colored pages: {{ colored_count }}</p>
+<p>Black and white pages: {{ b_w_count }}</p>
+<p>Total Pages: {{ total_page_count }}</p>
+<p><a href="{{ url_for('bp.upload_pdf') }}">Back to upload</a></p>
+{% endblock %}
