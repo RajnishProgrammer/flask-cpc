@@ -9,3 +9,4 @@ WTForms==3.0.0
 fitz==0.0.1.dev2
 numpy==1.22.1
 opencv-python-headless==4.5.4.58
+Pillow==9.4.0
