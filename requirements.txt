@@ -1,5 +1,3 @@
-# Editable install with no version control (01==1)
--e c:\users\hp\onedrive\desktop\python\plugins\01
 anyio==3.6.2
 appdirs==1.4.4
 astroid==2.4.2
@@ -18,8 +16,6 @@ fastapi==0.92.0
 Flask==2.2.3
 frozendict==2.3.5
 h11==0.14.0
-# Editable install with no version control (hello-world-json==1)
--e c:\users\hp\onedrive\desktop\python\plugins\hello-world-json
 html5lib==1.1
 idna==3.4
 importlib-metadata==6.0.0
