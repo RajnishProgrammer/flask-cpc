@@ -66,3 +66,4 @@ wsproto==1.2.0
 yfinance==0.2.12
 zipp==3.14.0
 gunicorn==20.1.0
+Mesa==1.2.1
