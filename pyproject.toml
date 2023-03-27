@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.flask]
+version = "^2.0.2"
+
+[tool.black]
+line-length = 79
+target-version = ["py37", "py38", "py39"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.poetry]
+name = "myapp"
+version = "0.1.0"
+description = "A Flask application for counting colored pages in a PDF file."
+authors = ["Your Name <youremail@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.0.2"
+Pillow = "^8.3.2"
+opencv-python-headless = "^4.5.3.56"
+PyMuPDF = "^1.18.17"
+numpy = "^1.21.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flit.metadata]
+module = "myapp"
+
+[tool.flit.scripts]
+myapp = "myapp:run"
