@@ -1,4 +1,10 @@
 from flask import Blueprint, render_template, request
+from PIL import Image
+import cv2
+import fitz
+import numpy as np
+from werkzeug.utils import secure_filename
+import os
 
 bp = Blueprint('bp', __name__, template_folder='templates')
 
@@ -10,12 +16,6 @@ def upload_pdf():
 
 @bp.route('/page_count', methods=['POST'])
 def page_count():
-    from PIL import Image
-    import cv2
-    import fitz
-    import numpy as np
-    from werkzeug.utils import secure_filename
-    import os
     colored_page_count = 0
     num = 0
     # Get the uploaded PDF file
