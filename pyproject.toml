@@ -47,7 +47,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.flit.metadata]
-module = "myapp"
+module = "flask-cpc"
 
 [tool.flit.scripts]
-myapp = "myapp:run"
+myapp = "flask-cpc:run"
