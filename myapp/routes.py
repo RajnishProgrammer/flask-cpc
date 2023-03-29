@@ -5,6 +5,7 @@ import fitz
 import numpy as np
 from werkzeug.utils import secure_filename
 import os
+from datetime import datetime
 
 bp = Blueprint('bp', __name__, template_folder='templates')
 
@@ -44,3 +45,19 @@ def page_count():
 @bp.route('/page_count_result')
 def page_count_result():
     return render_template('page_count.html')
+
+@bp.route('/about')
+def about():
+    return render_template('about.html')
+
+@bp.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+def inject_now_context_processor():
+    return {'now': datetime.utcnow()}
+
+
+bp.app_context_processor(inject_now_context_processor)
+
