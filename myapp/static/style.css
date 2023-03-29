@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 4px;
+}
+
+.custom-file-upload:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input[type="file"]::before {
+  content: 'Choose a file';
+  display: inline-block;
+  background: linear-gradient(#007bff, #0062cc);
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #fff;
+  padding: 6px 12px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+input[type="file"]:hover::before {
+  background: linear-gradient(#0069d9, #0062cc);
+  border-color: #0062cc;
+}
+
+input[type="file"]:active::before {
+  background: linear-gradient(#0062cc, #005cbf);
+  border-color: #005cbf;
+}
