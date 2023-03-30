@@ -42,7 +42,6 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 input[type="file"]::before {
-  content: 'Choose a file';
   display: inline-block;
   background: linear-gradient(#007bff, #0062cc);
   border: 1px solid #007bff;
