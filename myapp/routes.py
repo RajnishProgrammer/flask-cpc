@@ -23,7 +23,6 @@ def page_count():
     pdf_file = request.files['pdf']
     # Save the PDF file to the uploads folder
     filename = secure_filename(pdf_file.filename)
-    print(filename)
     pdf_file.save(os.path.join('myapp/static/uploads', filename))
     pdf_file_path = os.path.join('myapp/static/uploads', filename)
     with fitz.open(pdf_file_path) as doc:
@@ -37,7 +36,7 @@ def page_count():
             arr_mean = cv2.mean(arr)
             if not (arr_mean[0] == arr_mean[1] == arr_mean[2]):
                 colored_page_count += 1
-
+    os.remove(pdf_file_path)
     return render_template('page_count.html', colored_count=colored_page_count, 
                            b_w_count=total_page_count-colored_page_count, total_page_count=total_page_count)
 

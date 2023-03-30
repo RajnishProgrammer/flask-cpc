@@ -10,9 +10,9 @@
           <div class="card-body">
             <h1 class="text-center mb-4">Upload a PDF file</h1>
             <form method="POST" action="{{ url_for('bp.page_count') }}" enctype="multipart/form-data">
-              <div class="form-group form-text">
+              <div class="form-group">
                 <label for="pdf-file" class="col-auto col-form-label">Choose a file:</label>
-                <input type="file" id="pdf-file" name="pdf" accept="application/pdf" class="custom-file-upload col-auto" required />
+                <input type="file" id="pdf-file" name="pdf" accept="pdf" class="form-text custom-file-upload col-auto" required />
               </div>
               <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
             </form>
